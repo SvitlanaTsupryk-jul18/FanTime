@@ -1,0 +1,31 @@
+//variables
+$main-color: rgb(0, 208, 160);
+$text-color: rgb(255, 255, 102);
+$grey-color:rgba(52, 58, 64, 0.8);
+
+%backgroundImg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    height: 100px;
+    background-color: $main-color;
+    color: white;
+    padding-top: 70px;
+}
+
+nav {
+    background-color: $grey-color;
+    color: white;
+    font-size: 1.5em;
+}
