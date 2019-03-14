@@ -1,30 +1,30 @@
 {
-  "name": "fantime",
-  "version": "1.0.0",
-  "description": "",
-  "main": "gulpfile.js",
-  "dependencies": {},
-  "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "browser-sync": "^2.26.3",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-babel": "^8.0.0",
-    "gulp-clean-css": "^4.0.0",
-    "gulp-sass": "^4.0.2"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SvitlanaTsupryk-jul18/FanTime.git"
-  },
-  "author": "Svet",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/SvitlanaTsupryk-jul18/FanTime/issues"
-  },
-  "homepage": "https://github.com/SvitlanaTsupryk-jul18/FanTime#readme"
+    "name": "fantime",
+    "version": "1.0.0",
+    "description": "",
+    "main": "gulpfile.js",
+    "dependencies": {},
+    "devDependencies": {
+        "babel-core": "^6.26.3",
+        "babel-preset-env": "^1.7.0",
+        "browser-sync": "^2.26.3",
+        "gulp": "^3.9.1",
+        "gulp-autoprefixer": "^6.0.0",
+        "gulp-babel": "^8.0.0",
+        "gulp-clean-css": "^4.0.0",
+        "gulp-sass": "^4.0.2"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SvitlanaTsupryk-jul18/FanTime.git"
+    },
+    "author": "Svet",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/SvitlanaTsupryk-jul18/FanTime/issues"
+    },
+    "homepage": "https://github.com/SvitlanaTsupryk-jul18/FanTime#readme"
 }

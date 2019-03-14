@@ -1,59 +1,40 @@
-var gulp = require("gulp");
-var sass = require("gulp-sass");
-var browserSync = require("browser-sync").create();
-var autoprefixer = require("gulp-autoprefixer");
-var cleanCSS = require("gulp-clean-css");
-//var babel = require("gulp-babel");
+'use strict';
 
-var paths = {
-    styles: {
-        src: "sass/**/*.scss",
-        dest: "./css"
-    },
-    scripts: {
-        src: 'scripts/*.js',
-        dest: './'
-    }
-};
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var browserSync = require('browser-sync').create();
+const autoprefixer = require('gulp-autoprefixer');
 
-function style() {
-    return (gulp
-        .src(paths.styles.src)
-        .pipe(sass())
-        .on("error", sass.logError)
-        .pipe(autoprefixer())
-        .pipe(cleanCSS())
-        .pipe(gulp.dest(paths.styles.dest))
-        .pipe(browserSync.stream())
-    );
-}
 
-function scripts() {
-    return gulp
-        .src(paths.scripts.src)
-        .pipe(babel({
-            presets: ['env']
-        }))
-        .pipe(gulp.dest(paths.scripts.dest));
-}
+gulp.task('sass', function() {
+    return gulp.src('./sass/**/*.scss')
+        .pipe(sass.sync().on('error', sass.logError))
+        .pipe(gulp.dest('./css'));
+});
 
-function reload() {
-    browserSync.reload();
-}
+gulp.task('autopref', () =>
+    gulp.src('css/style.css')
+    .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+    }))
+    .pipe(gulp.dest('dist/style.css'))
+);
 
-function watch() {
+// Static server
+gulp.task('browser-sync', function() {
     browserSync.init({
-        // You can tell browserSync to use this directory and serve it as a mini-server
         server: {
             baseDir: "./"
         }
     });
-    gulp.watch(paths.styles.src, style);
-    gulp.watch("path/to/html/*.html", reload);
-    //gulp.watch(paths.scripts.src, scripts);
-}
-//var build = gulp.series(gulp.parallel(style, scripts));
-exports.style = style;
-exports.reload = reload;
-exports.watch = watch;
-exports.default = watch;
+});
+
+gulp.task('syncReload', function() {
+    browserSync.reload();
+});
+
+
+gulp.task('default', ['browser-sync', 'sass'], function() {
+    gulp.watch('./sass/**/*.scss', ['sass', 'syncReload']);
+});
