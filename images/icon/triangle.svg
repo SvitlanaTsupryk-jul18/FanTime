@@ -2,5 +2,5 @@
 <svg xmlns="http://www.w3.org/2000/svg"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 	height="80" width="80" >
- <rect x="0" y="0" width="80" height="80"  style="fill:#2d3b50"  />
+ <rect x="0" y="0" width="80" height="80"  style="fill:rgba(45, 59, 80, 0.4)"  />
   Sorry, your browser does not support inline SVG.</svg>
