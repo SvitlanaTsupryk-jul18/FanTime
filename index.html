@@ -9,60 +9,89 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Fan Time</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
 </head>
 
 <body>
 
     <header>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark ">
-            <a class="navbar-brand" href="#">
-                <img src="images/icons/logo.svg" width="40" height="40" class="d-inline-block align-top" alt=""> ST
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+        <div class="logo">
+            <img src="./images/logo.png" alt="Yacht Marine">
+        </div>
+        <nav class=" navbar navbar-expand-lg navbar-dark ">
+            <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarCollapse " aria-controls="navbarNav " aria-expanded="false " aria-label="Toggle navigation ">
+                <span class="navbar-toggler-icon "></span>
             </button>
+            <div class="collapse navbar-collapse flex-column " id="navbarCollapse ">
+                <div class="header__top-wrapper ">
+                    <div class="header__top mycontainer ">
+                        <div class="contacts left ">
+                            <a href="tel:+9965553453 " class="header__link "><img src="./images/icon/fa-mobile-phone.svg " alt="phone number " class="header__icon ">996 - 5553 - 453</a>
+                            <a href="mailto:info@shopy.com " class="header__link isbefore"> <img src="./images/icon/fa-envelope.svg " alt="email " class="header__icon isbefore">info@shopy.com</a>
+                        </div>
+                        <div class="right ">
+                            <div class="socials ">
+                                <a href="#"><img src="./images/icon/fa-facebook-square.svg " alt="facebook icon " class="header__icon "></a>
+                                <a href="#"><img src="./images/icon/fa-twitter-square.svg " alt="twitter icon " class="header__icon "></a>
+                                <a href="#"><img src="./images/icon/fa-youtube-play.svg " alt="youtube icon " class="header__icon "></a>
+                            </div>
+                            <div class="login  isbefore">
+                                <a href="#" class="header__link "><img src="./images/icon/fa-key.svg " alt="login icon " class="header__icon">Login</a>
+                            </div>
+                            <div class="lang  isbefore">
+                                <a href="#" class="header__link "><img src="./images/icon/fa-globe.svg " alt="globe icon " class="header__icon">EN</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto ">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#resume">About me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
+                <ul class="navbar-nav header__bottom mycontainer ">
+                    <div class="left ">
+                        <li class="nav-item">
+                            <a class="nav-link " href="# ">Home <span class="sr-only ">(current)</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " href="# ">Our fleet</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " href="# ">Drivers</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="# ">Locations</a>
+                        </li>
+                    </div>
+                    <div class="right ">
+                        <li class="nav-item  ">
+                            <a class="nav-link " href="# ">About<span class="sr-only ">(current)</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " href="# ">Testimonials</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " href="# ">News</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="# ">Contact</a>
+                        </li>
+                    </div>
                 </ul>
-                <form class="form-inline nav-item my-2 my-lg-0">
-                    <a id="send" href="mailto:stsupryk@gmail.com"><i class="fas fa-envelope"></i><i class="fas fa-envelope-open"></i></a>
-
-                </form>
             </div>
+
         </nav>
+
+
+
     </header>
 
     <!-- Optional JavaScript -->
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin=" anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy " crossorigin="anonymous "></script>
+    <!-- <script src="script.js "></script> -->
 
 </body>
 
