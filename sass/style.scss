@@ -1,138 +1,201 @@
-//variables
-$main-color: rgb(0, 208, 160);
-$text-color: rgb(255, 255, 102);
-$grey-color:rgba(52, 58, 64, 0.8);
-%backgroundImg {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-decoration: none;
-}
-
-body {
-    background-image: url(../images/BGimage.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-    font-family: 'Playfair Display', serif;
-    overflow: hidden;
-}
-
-header {
-    position: relative;
-}
-
-.mycontainer {
-    max-width: 1230px;
-    padding: 0 30px;
-    margin: 0 auto;
-}
-
-nav {
-    background-color: $grey-color;
-    color: white;
-    font-size: 1.5em;
-}
-
-.navbar {
-    background-color: rgba(20, 27, 37, 0.34);
-    padding: 0 15px;
-}
-
-.navbar-toggler {
-    margin: auto;
-}
-
-.nav-link {
-    font-size: 12px;
-    font-weight: 900;
-    text-transform: uppercase;
-    padding: 30px 15px !important;
-    color: white !important;
-}
-
-.header {
-    &__top {
-        background-color: #2d3b50;
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        position: relative;
-        &:before {
-            position: absolute;
-            content: url(../images/icon/triangle.svg);
-            left: -40px;
-            top: -54px;
-            transform: rotate(-45deg);
-            z-index: -1;
+        //variables
+        $main-color: rgb(0, 208, 160);
+        $text-color: rgb(255, 255, 102);
+        $grey-color:rgba(52, 58, 64, 0.8);
+        %backgroundImg {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
-        &:after {
-            position: absolute;
-            content: url(../images/icon/triangle.svg);
-            right: -40px;
-            top: -54px;
-            transform: rotate(-45deg);
-            z-index: -1;
+        
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-decoration: none;
         }
-        &-wrapper {
-            background-color: rgba(45, 59, 80, 0.6);
+        
+        body {
+            background-image: url(../images/BGimage.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
             width: 100%;
+            font-family: 'Playfair Display', serif;
+            overflow: hidden;
         }
-    }
-    &__bottom {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-    }
-    &__icon {
-        color: white;
-        padding-right: 10px;
-    }
-    &__link {
-        font-weight: 700;
-        color: white;
-        padding: 12px;
-        font-size: 12px;
-    }
-}
-
-.logo {
-    background-image: url(../images/Polygon1.svg);
-    width: 350px;
-    text-align: center;
-    z-index: 10;
-    height: 130px;
-    margin: 0 auto;
-    padding-top: 25px;
-    position: absolute;
-    transform: translateX(-50%);
-    left: 50%;
-}
-
-.left,
-.right {
-    display: flex;
-}
-
-.isbefore {
-    position: relative;
-    margin-left: 20px;
-    &::before {
-        content: "";
-        position: absolute;
-        left: -10px;
-        top: 14px;
-        background-color: #515e70;
-        width: 1px;
-        height: 18px;
-    }
-}
+        
+        header {
+            position: relative;
+        }
+        
+        .mycontainer {
+            max-width: 1230px;
+            padding: 0 30px;
+            margin: 0 auto;
+        }
+        
+        nav {
+            background-color: $grey-color;
+            color: white;
+            font-size: 1.5em;
+        }
+        
+        .navbar {
+            background-color: rgba(20, 27, 37, 0.34);
+            padding: 0 15px;
+        }
+        
+        .navbar-toggler {
+            margin: auto;
+            border: none;
+        }
+        
+        .navbar-dark .navbar-toggler-icon {
+            background-image: url(../images/icon/burger.svg);
+        }
+        
+        .close-img {
+            background-image: url(../images/icon/close.svg)!important;
+        }
+        
+        .nav-link {
+            font-size: 12px;
+            font-weight: 900;
+            text-transform: uppercase;
+            padding: 30px 15px !important;
+            color: white !important;
+        }
+        
+        .header {
+            &__top {
+                background-color: #2d3b50;
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                position: relative;
+                &:before {
+                    position: absolute;
+                    content: url(../images/icon/triangle.svg);
+                    left: -40px;
+                    top: -54px;
+                    transform: rotate(-45deg);
+                    z-index: -1;
+                }
+                &:after {
+                    position: absolute;
+                    content: url(../images/icon/triangle.svg);
+                    right: -40px;
+                    top: -54px;
+                    transform: rotate(-45deg);
+                    z-index: -1;
+                }
+                &-wrapper {
+                    background-color: rgba(45, 59, 80, 0.6);
+                    width: 100%;
+                }
+            }
+            &__bottom {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+            }
+            &__icon {
+                color: white;
+                padding-right: 10px;
+            }
+            &__link {
+                font-weight: 700;
+                color: white;
+                padding: 12px;
+                font-size: 12px;
+            }
+        }
+        
+        .logo {
+            background-image: url(../images/Polygon1.svg);
+            width: 350px;
+            text-align: center;
+            z-index: 10;
+            height: 130px;
+            margin: 0 auto;
+            padding-top: 25px;
+            position: absolute;
+            transform: translateX(-50%);
+            left: 50%;
+        }
+        
+        .left,
+        .right {
+            display: flex;
+        }
+        
+        .isbefore {
+            position: relative;
+            margin-left: 20px;
+            &::before {
+                content: "";
+                position: absolute;
+                left: -10px;
+                top: 14px;
+                background-color: #515e70;
+                width: 1px;
+                height: 18px;
+            }
+        }
+        
+        @media only screen and (max-width: 992px) {
+            .mycontainer {
+                padding: 0 10px;
+            }
+            .navbar {
+                padding: 0;
+                background-color: #2d3b50;
+                text-align: center;
+            }
+            .logo {
+                z-index: 0;
+                padding-top: 50px;
+                img {
+                    transform: scale(.8);
+                }
+            }
+            .left,
+            .right,
+            .header__top {
+                flex-direction: column;
+            }
+            .isbefore {
+                margin-left: 0px;
+                &::before {
+                    width: 0;
+                    height: 0
+                }
+            }
+            .nav-link {
+                padding: 5px 0 10px 0 !important;
+            }
+            .header {
+                &__top {
+                    padding-bottom: 20px;
+                }
+                &__link {
+                    border-bottom: 1px solid #515e70;
+                    padding: 10px;
+                    display: block;
+                }
+            }
+            .socials {
+                border-bottom: 1px solid #515e70;
+                padding-bottom: 10px;
+            }
+            .logon,
+            .lang {
+                width: 100%;
+            }
+            .navbar-collapse {
+                padding: 8%;
+            }
+        }
