@@ -439,3 +439,30 @@
                         }
                     }
                 }
+                
+                //preloader 
+                .preloader {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    z-index: 1111;
+                    background-color: $main-color;
+                    text-align: center;
+                    transition: 1s all;
+                    opacity: 1;
+                    visibility: visible;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                
+                .done {
+                    transform: translateY(-200%);
+                    visibility: hidden;
+                    z-index: -1;
+                }
+                
+                // .logo-anim {
+                // }

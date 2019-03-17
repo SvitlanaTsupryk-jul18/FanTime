@@ -1,12 +1,12 @@
 'use strict';
 
 (function() {
+    // invocations
 
-    // invocation
-
-    //preloader();
+    preloader();
     burgerCloseIcon();
     animation();
+
 
     //change burger close icon
 
@@ -24,7 +24,7 @@
     function preloader() {
         document.body.onload = function() {
             setTimeout(function() {
-                var preloader = document.querySelector(".preloader");
+                let preloader = document.querySelector(".preloader");
                 if (!preloader.classList.contains('done')) {
                     preloader.classList.add('done');
                 }
@@ -39,16 +39,16 @@
         let tl = new TimelineMax();
         tl
             .from(".header", 1, {
-                y: '-300%'
+                y: '-300%',
+                delay: 2
             }, )
             .staggerFrom(".anim", .5, {
                 y: '150',
                 opacity: 0
-            }, 0.2)
+            }, 0.4, "-=0.1")
             .from(".anchor", 0.1, {
                 scale: 0
-            }, "-=0.8")
-
+            }, "-=1.6")
 
     }
 })();
