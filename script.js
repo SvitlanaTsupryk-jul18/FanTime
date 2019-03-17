@@ -7,7 +7,6 @@
     burgerCloseIcon();
     animation();
 
-
     //change burger close icon
 
     function burgerCloseIcon() {
@@ -33,14 +32,14 @@
     };
 
 
-    //show text in example of portfolio
+    //animation after loading
+
     function animation() {
 
         let tl = new TimelineMax();
         tl
             .from(".header", 1, {
-                y: '-300%',
-                delay: 2
+                y: '-300%'
             }, )
             .staggerFrom(".anim", .5, {
                 y: '150',
@@ -51,4 +50,5 @@
             }, "-=1.6")
 
     }
+
 })();

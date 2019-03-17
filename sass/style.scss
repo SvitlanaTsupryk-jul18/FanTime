@@ -361,6 +361,9 @@
                     .socials {
                         border-bottom: 1px solid #515e70;
                         padding-bottom: 10px;
+                        a:hover .header__link {
+                            transform: scale(1.2);
+                        }
                     }
                     .logon,
                     .lang {
@@ -463,6 +466,3 @@
                     visibility: hidden;
                     z-index: -1;
                 }
-                
-                // .logo-anim {
-                // }
