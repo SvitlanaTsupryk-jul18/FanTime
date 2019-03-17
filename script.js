@@ -39,7 +39,8 @@
         let tl = new TimelineMax();
         tl
             .from(".header", 1, {
-                y: '-300%'
+                y: '-300%',
+                delay: 1
             }, )
             .staggerFrom(".anim", .5, {
                 y: '150',

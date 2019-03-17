@@ -70,8 +70,13 @@
                     font-size: 12px;
                     font-weight: 900;
                     text-transform: uppercase;
-                    padding: 30px 15px !important;
+                    padding: 26px 15px !important;
                     color: white !important;
+                    transition: all .2s;
+                    &:hover,
+                    &:active {
+                        color: $brand-color!important;
+                    }
                 }
                 
                 .header {
@@ -111,12 +116,24 @@
                     &__icon {
                         color: white;
                         padding-right: 10px;
+                        transition: all .2s;
+                        &:hover {
+                            transform: scale(1.5);
+                        }
                     }
                     &__link {
                         font-weight: 700;
                         color: white;
                         padding: 12px;
                         font-size: 12px;
+                        transition: all .1s;
+                        &:hover .header__icon {
+                            animation: swing .8s infinite;
+                        }
+                        &:hover {
+                            text-decoration: none;
+                            color: $brand-color;
+                        }
                     }
                 }
                 
@@ -196,6 +213,13 @@
                         @extend %button;
                         font-style: italic;
                         padding: 20px;
+                        transition: all 0.2s;
+                        &:hover {
+                            color: $brand-color;
+                        }
+                        &:hover .scroll-icon {
+                            transform: translateY(10px);
+                        }
                     }
                     &__adapt {
                         display: none;
@@ -229,6 +253,10 @@
                     }
                 }
                 
+                .scroll-icon {
+                    transition: all .5s;
+                }
+                
                 .anchor {
                     display: block;
                     margin-top: -20px;
@@ -239,6 +267,10 @@
                     padding: 1rem 90px;
                     text-transform: uppercase;
                     background: linear-gradient(90deg, $brand-color 0%, #c19857 25%, #d1a866 100%);
+                    transition: all .2s;
+                    &:hover {
+                        animation: rubberBand .8s 1;
+                    }
                 }
                 
                 .search {
@@ -465,4 +497,59 @@
                     transform: translateY(-200%);
                     visibility: hidden;
                     z-index: -1;
+                }
+                
+                //keyframes for animation
+                @keyframes swing {
+                    20% {
+                        -webkit-transform: rotate3d(0, 0, 1, 15deg);
+                        transform: rotate3d(0, 0, 1, 15deg);
+                    }
+                    40% {
+                        -webkit-transform: rotate3d(0, 0, 1, -10deg);
+                        transform: rotate3d(0, 0, 1, -10deg);
+                    }
+                    60% {
+                        -webkit-transform: rotate3d(0, 0, 1, 5deg);
+                        transform: rotate3d(0, 0, 1, 5deg);
+                    }
+                    80% {
+                        -webkit-transform: rotate3d(0, 0, 1, -5deg);
+                        transform: rotate3d(0, 0, 1, -5deg);
+                    }
+                    to {
+                        -webkit-transform: rotate3d(0, 0, 1, 0deg);
+                        transform: rotate3d(0, 0, 1, 0deg);
+                    }
+                }
+                
+                @keyframes rubberBand {
+                    from {
+                        -webkit-transform: scale3d(1, 1, 1);
+                        transform: scale3d(1, 1, 1);
+                    }
+                    30% {
+                        -webkit-transform: scale3d(1.25, 0.75, 1);
+                        transform: scale3d(1.25, 0.75, 1);
+                    }
+                    40% {
+                        -webkit-transform: scale3d(0.75, 1.25, 1);
+                        transform: scale3d(0.75, 1.25, 1);
+                    }
+                    50% {
+                        -webkit-transform: scale3d(1.15, 0.85, 1);
+                        transform: scale3d(1.15, 0.85, 1);
+                    }
+                    65% {
+                        -webkit-transform: scale3d(0.95, 1.05, 1);
+                        transform: scale3d(0.95, 1.05, 1);
+                    }
+                    75% {
+                        -webkit-transform: scale3d(1.05, 0.95, 1);
+                        transform: scale3d(1.05, 0.95, 1);
+                    }
+                    to {
+                        -webkit-transform: scale3d(1, 1, 1);
+                        transform: scale3d(1, 1, 1);
+                    }
                 }
