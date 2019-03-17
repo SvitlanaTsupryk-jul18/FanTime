@@ -1,5 +1,6 @@
             //variables
             $grey-color:rgba(52, 58, 64, 0.8);
+            $main-color:#2d3b50;
             $brand-color: #bc9352;
             %button {
                 font-size: 13px;
@@ -20,7 +21,7 @@
             }
             
             body {
-                background-image: url(../images/BGimage.png);
+                background-image: url(../images/BGimage1.png);
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -75,7 +76,7 @@
             
             .header {
                 &__top {
-                    background-color: #2d3b50;
+                    background-color: $main-color;
                     display: flex;
                     width: 100%;
                     justify-content: space-between;
@@ -207,25 +208,72 @@
             }
             
             .search {
-                width: 1000px;
                 height: 100px;
                 display: flex;
+                font-size: 13px;
+                color: #bdc1c7;
                 padding: 28px 43px;
                 align-items: center;
                 justify-content: space-between;
+                background-color: rgba(47, 62, 84, 0.7);
                 &__wrap {
                     height: 40px;
                     width: 240px;
                     overflow: hidden;
-                    border: 1px solid white;
-                    background: url(../images/icon/select-arrow.svg) 96% / 20% no-repeat;
+                    border: 1px solid rgb(81, 94, 112);
+                    background: url(../images/icon/select-arrow.svg);
+                    background-repeat: no-repeat;
+                    background-position: 96% 45%;
                 }
                 &__name {
                     height: 40px;
                     width: 270px;
                     background: transparent;
-                    color: white;
+                    color: #bdc1c7;
+                    padding-left: 12px;
+                    border: none
                 }
+                &__charact {
+                    background-color: transparent;
+                    width: 90px;
+                    height: 40px;
+                    border: none;
+                    text-align: right;
+                    &-wrap {
+                        border: 1px solid rgb(81, 94, 112);
+                        height: 40px;
+                        width: 135px;
+                        display: flex;
+                    }
+                }
+                &__btn {
+                    @extend %button;
+                    background-image: url(../images/icon/search.png);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    width: 45px;
+                }
+                &__detailed {
+                    background-color: transparent;
+                    color: #bdc1c7;
+                    @extend %button;
+                }
+                &__currency {
+                    float: left;
+                }
+                &__price {
+                    width: 300px;
+                }
+                &__rangePrice {
+                    display: block;
+                    text-align: right;
+                }
+            }
+            
+            option {
+                width: 240px;
+                background-color: $main-color;
+                color: #bdc1c7;
             }
             
             @media only screen and (max-width: 992px) {
@@ -234,7 +282,7 @@
                 }
                 .navbar {
                     padding: 0;
-                    background-color: #2d3b50;
+                    background-color: $main-color;
                     text-align: center;
                 }
                 .logo {

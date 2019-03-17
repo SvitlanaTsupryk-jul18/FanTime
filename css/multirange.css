@@ -1,0 +1,50 @@
+@supports (--css: variables) {
+    input[type="range"].multirange {
+        padding: 0;
+        margin: 5px;
+        display: inline-block;
+        vertical-align: top;
+        -webkit-appearance: none;
+        background-color: transparent;
+    }
+    input[type="range"].multirange.original {
+        position: absolute;
+    }
+    input[type="range"].multirange.original::-webkit-slider-thumb {
+        position: relative;
+        z-index: 2;
+    }
+    input[type="range"].multirange.original::-moz-range-thumb {
+        transform: scale(1);
+        /* FF doesn't apply position it seems */
+        z-index: 1;
+    }
+    input[type="range"].multirange::-moz-range-track {
+        border-color: transparent;
+        /* needed to switch FF to "styleable" control */
+    }
+    input[type="range"].multirange.ghost {
+        position: relative;
+        background: var(--track-background);
+        --track-background: linear-gradient(to right, rgb(189, 193, 199) var(--low), var(--range-color) 0, var(--range-color) var(--high), rgb(189, 193, 199) 0) no-repeat 0 45% / 100% 20%;
+        --range-color: #bc9352;
+        width: 300px;
+    }
+    input[type="range"].multirange.ghost::-webkit-slider-runnable-track {
+        background: var(--track-background);
+    }
+    input[type="range"].multirange.ghost::-moz-range-track {
+        background: var(--track-background);
+    }
+    input[type="range"].multirange::-webkit-slider-thumb {
+        pointer-events: all;
+        position: relative;
+        z-index: 1;
+        outline: 0;
+        -webkit-appearance: none;
+        border: none;
+        width: 28px;
+        height: 11px;
+        background-image: url(../images/price-range.png)/* W3C */
+    }
+}

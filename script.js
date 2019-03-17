@@ -7,8 +7,8 @@
     //preloader();
     burgerCloseIcon();
 
-    //change burger close icon
 
+    //change burger close icon
 
     function burgerCloseIcon() {
         let btn = document.querySelector(".navbar-toggler");
@@ -17,6 +17,8 @@
             icon.classList.toggle('close-img');
         });
     }
+
+
     //////preloader
 
     function preloader() {

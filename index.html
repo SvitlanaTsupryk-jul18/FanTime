@@ -10,7 +10,7 @@
     <title>Fan Time</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/multirange.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
@@ -20,13 +20,13 @@
         <div class="logo">
             <img src="./images/logo.png" alt="Yacht Marine">
         </div>
-        <nav class="navbar navbar-expand-lg navbar-dark p-o">
+        <nav class="navbar navbar-expand-lg navbar-dark p-0">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse flex-column " id="navbarSupportedContent">
                 <div class="header__top-wrapper p-0">
-                    <div class="header__top mycontainer ">
+                    <div class="header__top mycontainer p-0">
                         <div class="contacts left ">
                             <a href="tel:+9965553453 " class="header__link "><img src="./images/icon/fa-mobile-phone.svg " alt="phone number " class="header__icon ">996 - 5553 - 453</a>
                             <a href="mailto:info@shopy.com " class="header__link isbefore"> <img src="./images/icon/fa-envelope.svg " alt="email " class="header__icon isbefore">info@shopy.com</a>
@@ -93,15 +93,27 @@
                     <option>name3</option>
                 </select>
             </div>
-        </div>
-        <button type="button" class="hero__btn">Scroll Down &nbsp;&nbsp;<img src="./images/icon/fa-long-arrow-up.svg" alt="arrow down"></button>
+            <div class="search__price">
+                <div class="search__currency">
+                    PRICE<span class="funt">£</span> /<span class="funt"></span> €</span> / <span class="funt"></span>$</span>
+                </div>
+                <span class="search__rangePrice rangePrice">0 M  -  200 M</span>
+                <input type="range" multiple value="10,200" step="1" max="200" min="0">
+            </div>
+            <div class="search__charact-wrap">
+                <input type="search" placeholder="SEARCH" class="search__charact">
+                <button type="button" class="search__btn"></button>
+            </div>
+            <div>
+                <button type="button" class="search__detailed">DETAILED SEARCH &nbsp;&nbsp;<img src="./images/icon/Shape 1.svg"></button>
+            </div>
+            <button type="button" class="hero__btn">Scroll Down &nbsp;&nbsp;<img src="./images/icon/fa-long-arrow-up.svg" alt="arrow down"></button>
     </section>
-    <!-- Optional JavaScript -->
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="multirange.js"></script>
     <script src="script.js "></script>
 
 </body>

@@ -1,4 +1,4 @@
-.hero__btn, .details-btn {
+.hero__btn, .details-btn, .search__btn, .search__detailed {
   font-size: 13px;
   background: none;
   border: none;
@@ -15,7 +15,7 @@
   text-decoration: none; }
 
 body {
-  background-image: url(../images/BGimage.png);
+  background-image: url(../images/BGimage1.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -171,23 +171,60 @@ nav {
   background: linear-gradient(90deg, #bc9352 0%, #c19857 25%, #d1a866 100%); }
 
 .search {
-  width: 1000px;
   height: 100px;
   display: flex;
+  font-size: 13px;
+  color: #bdc1c7;
   padding: 28px 43px;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-between;
+  background-color: rgba(47, 62, 84, 0.7); }
   .search__wrap {
     height: 40px;
     width: 240px;
     overflow: hidden;
-    border: 1px solid white;
-    background: url(../images/icon/select-arrow.svg) 96%/20% no-repeat; }
+    border: 1px solid #515e70;
+    background: url(../images/icon/select-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: 96% 45%; }
   .search__name {
     height: 40px;
     width: 270px;
     background: transparent;
-    color: white; }
+    color: #bdc1c7;
+    padding-left: 12px;
+    border: none; }
+  .search__charact {
+    background-color: transparent;
+    width: 90px;
+    height: 40px;
+    border: none;
+    text-align: right; }
+    .search__charact-wrap {
+      border: 1px solid #515e70;
+      height: 40px;
+      width: 135px;
+      display: flex; }
+  .search__btn {
+    background-image: url(../images/icon/search.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 45px; }
+  .search__detailed {
+    background-color: transparent;
+    color: #bdc1c7; }
+  .search__currency {
+    float: left; }
+  .search__price {
+    width: 300px; }
+  .search__rangePrice {
+    display: block;
+    text-align: right; }
+
+option {
+  width: 240px;
+  background-color: #2d3b50;
+  color: #bdc1c7; }
 
 @media only screen and (max-width: 992px) {
   .mycontainer {
