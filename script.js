@@ -6,7 +6,7 @@
 
     //preloader();
     burgerCloseIcon();
-
+    animation();
 
     //change burger close icon
 
@@ -34,31 +34,21 @@
 
 
     //show text in example of portfolio
-    function showTitle() {
+    function animation() {
 
         let tl = new TimelineMax();
         tl
-            .from(".navbar-brand", .5, {
-                x: '-300%',
+            .from(".header", 1, {
+                y: '-300%'
+            }, )
+            .staggerFrom(".anim", .5, {
+                y: '150',
+                opacity: 0
+            }, 0.2)
+            .from(".anchor", 0.1, {
+                scale: 0
+            }, "-=0.8")
 
-            }, delay = .5)
-            .staggerFrom(".nav-link", .5, {
-                y: '-50',
-                opacity: 0
-            }, 0.1, "-=0.20")
-            .from('#title', 2, {
-                y: '-300%',
-                ease: Bounce.easeOut
-            })
-            .from('.hero__subtitle', .5, {
-                y: '100',
-                opacity: 0
-            }, "-=1")
-            .from('.hero__toscroll', 1, {
-                backgroundColor: "rgba(52, 58, 64)",
-                opacity: .8,
-                borderRadius: "5px"
-            }, "-=2")
 
     }
 })();

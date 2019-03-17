@@ -13,7 +13,7 @@
         var value = input.getAttribute("value");
         var values = value === null ? [] : value.split(",");
         var min = +(input.min || 0);
-        var max = +(input.max || 300);
+        var max = +(input.max || 200);
         var ghost = input.cloneNode();
 
         input.classList.add("multirange", "original");
@@ -62,7 +62,7 @@
         }
 
         function update() {
-            ghost.style.setProperty("--low", 100 * ((input.valueLow - min) / (max - min)) + 1 + "%");
+            ghost.style.setProperty("--low", 100 * ((input.valueLow - min) / (max - min)) / 3 + 1 + "%");
             ghost.style.setProperty("--high", 100 * ((input.valueHigh - min) / (max - min)) - 1 + "%");
             price.innerHTML = "$ " + parseFloat(input.value) + "M - $" + parseFloat(ghost.value) + "M";
         }
