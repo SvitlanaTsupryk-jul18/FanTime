@@ -2,6 +2,7 @@
                 $grey-color:rgba(52, 58, 64, 0.8);
                 $main-color:#2d3b50;
                 $brand-color: #bc9352;
+                $text-color:#bdc1c7;
                 %button {
                     font-size: 13px;
                     background: none;
@@ -203,7 +204,7 @@
                     &__text {
                         font-style: italic;
                         font-size: 20px;
-                        color: #bdc1c7;
+                        color: $text-color;
                         width: 55%;
                         margin: 0 auto;
                         padding: 40px 0;
@@ -234,7 +235,7 @@
                             width: 46%;
                             height: 44px;
                             @extend %button;
-                            color: #bdc1c7;
+                            color: $text-color;
                             background-color: rgba(243, 201, 133, 0.1);
                             &:last-child {
                                 position: relative;
@@ -267,7 +268,7 @@
                     padding: 1rem 90px;
                     text-transform: uppercase;
                     background: linear-gradient(90deg, $brand-color 0%, #c19857 25%, #d1a866 100%);
-                    transition: all .2s;
+                    transition: all .3s;
                     &:hover {
                         animation: rubberBand .8s 1;
                     }
@@ -277,7 +278,7 @@
                     height: 100px;
                     display: flex;
                     font-size: 13px;
-                    color: #bdc1c7;
+                    color: $text-color;
                     padding: 28px 43px;
                     margin-top: 20px;
                     align-items: center;
@@ -296,7 +297,7 @@
                         height: 40px;
                         width: 270px;
                         background: transparent;
-                        color: #bdc1c7;
+                        color: $text-color;
                         padding-left: 12px;
                         border: none
                     }
@@ -322,7 +323,7 @@
                     }
                     &__detailed {
                         background-color: transparent;
-                        color: #bdc1c7;
+                        color: $text-color;
                         @extend %button;
                     }
                     &__currency {
@@ -340,7 +341,88 @@
                 option {
                     width: 240px;
                     background-color: $main-color;
-                    color: #bdc1c7;
+                    color: $text-color;
+                }
+                
+                //preloader 
+                .preloader {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    z-index: 1111;
+                    background-color: $main-color;
+                    text-align: center;
+                    transition: 1s all;
+                    opacity: 1;
+                    visibility: visible;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                
+                .done {
+                    transform: translateY(-200%);
+                    visibility: hidden;
+                    z-index: -1;
+                }
+                
+                //modals on ckick on buttons md xs
+                .modall {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    background-color: $main-color;
+                    color: $text-color;
+                    padding: 60px;
+                    transform: translateY(-500%);
+                    transition: all .5s;
+                    &__title {
+                        color: $brand-color;
+                        font-size: 13px;
+                        text-align: left;
+                    }
+                    &__btn {
+                        @extend %button;
+                        width: 100%;
+                        text-align: center;
+                        color: $text-color;
+                        background-color: #3f4752;
+                        padding: 12px 0;
+                    }
+                    &__search {
+                        width: 100%;
+                        margin: 20px 0!important;
+                    }
+                    &__select {
+                        width: 110%;
+                    }
+                    &-content {
+                        transform: translateY(-200%);
+                    }
+                }
+                
+                .close-modal {
+                    @extend %button;
+                    width: 100%;
+                    text-align: center;
+                    color: $text-color;
+                    font-size: 2rem;
+                    outline: none;
+                    transition: all .3s;
+                    &:hover {
+                        transform: rotate(180deg) scale(1.5);
+                        outline: none;
+                    }
+                }
+                
+                .yacht-link {
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    line-height: 28px;
+                    text-align: left;
                 }
                 
                 @media only screen and (max-width: 1200px) {
@@ -473,30 +555,6 @@
                             width: 100%;
                         }
                     }
-                }
-                
-                //preloader 
-                .preloader {
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100vw;
-                    height: 100vh;
-                    z-index: 1111;
-                    background-color: $main-color;
-                    text-align: center;
-                    transition: 1s all;
-                    opacity: 1;
-                    visibility: visible;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-                
-                .done {
-                    transform: translateY(-200%);
-                    visibility: hidden;
-                    z-index: -1;
                 }
                 
                 //keyframes for animation

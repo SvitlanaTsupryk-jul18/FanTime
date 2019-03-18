@@ -1,4 +1,4 @@
-.hero__btn, .hero__adapt-btn, .details-btn, .search__btn, .search__detailed {
+.hero__btn, .hero__adapt-btn, .details-btn, .search__btn, .search__detailed, .modall__btn, .close-modal {
   font-size: 13px;
   background: none;
   border: none;
@@ -218,7 +218,7 @@ nav {
   padding: 1rem 90px;
   text-transform: uppercase;
   background: linear-gradient(90deg, #bc9352 0%, #c19857 25%, #d1a866 100%);
-  transition: all .2s; }
+  transition: all .3s; }
   .details-btn:hover {
     animation: rubberBand .8s 1; }
 
@@ -278,6 +278,72 @@ option {
   width: 240px;
   background-color: #2d3b50;
   color: #bdc1c7; }
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1111;
+  background-color: #2d3b50;
+  text-align: center;
+  transition: 1s all;
+  opacity: 1;
+  visibility: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.done {
+  transform: translateY(-200%);
+  visibility: hidden;
+  z-index: -1; }
+
+.modall {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2d3b50;
+  color: #bdc1c7;
+  padding: 60px;
+  transform: translateY(-500%);
+  transition: all .5s; }
+  .modall__title {
+    color: #bc9352;
+    font-size: 13px;
+    text-align: left; }
+  .modall__btn {
+    width: 100%;
+    text-align: center;
+    color: #bdc1c7;
+    background-color: #3f4752;
+    padding: 12px 0; }
+  .modall__search {
+    width: 100%;
+    margin: 20px 0 !important; }
+  .modall__select {
+    width: 110%; }
+  .modall-content {
+    transform: translateY(-200%); }
+
+.close-modal {
+  width: 100%;
+  text-align: center;
+  color: #bdc1c7;
+  font-size: 2rem;
+  outline: none;
+  transition: all .3s; }
+  .close-modal:hover {
+    transform: rotate(180deg) scale(1.5);
+    outline: none; }
+
+.yacht-link {
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 28px;
+  text-align: left; }
 
 @media only screen and (max-width: 1200px) {
   .hero__text {
@@ -366,27 +432,6 @@ option {
       height: 34px; }
   .hero .logo {
     width: 100%; } }
-
-.preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1111;
-  background-color: #2d3b50;
-  text-align: center;
-  transition: 1s all;
-  opacity: 1;
-  visibility: visible;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
-.done {
-  transform: translateY(-200%);
-  visibility: hidden;
-  z-index: -1; }
 
 @keyframes swing {
   20% {

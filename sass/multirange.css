@@ -6,6 +6,7 @@
         vertical-align: top;
         -webkit-appearance: none;
         background-color: transparent;
+        outline: none;
     }
     input[type="range"].multirange.original {
         position: absolute;
