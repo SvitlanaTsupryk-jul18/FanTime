@@ -18,7 +18,7 @@ gulp.task('autopref', () =>
         browsers: ['last 2 versions'],
         cascade: false
     }))
-    .pipe(gulp.dest('dist/style.css'))
+    .pipe(gulp.dest('./dest'))
 );
 
 // Static server
